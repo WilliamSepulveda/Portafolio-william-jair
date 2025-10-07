@@ -1,0 +1,232 @@
+@import url(./variables.css);
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Habilita el desplazamiento suave para los enlaces de ancla */
+    scroll-behavior: smooth;
+}
+
+.header{
+    background: linear-gradient(to left, #190031 0%, #090011 100%) transparent;
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0;
+    left: 0;
+    background: transparent; /* Lo hace transparente */
+    display: flex;
+    padding: 0 20px; /* Añadido padding horizontal */
+    justify-content: space-between; /* Cambiado para separar los elementos */
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    z-index: 100; /* Asegura que esté por encima de todo */
+    transition: background-color 0.4s ease; /* Añade una transición suave */
+}
+
+.header.scrolled {
+    background-color: rgba(9, 0, 17, 0.8); /* Negro/púrpura oscuro semitransparente */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque para el fondo */
+    -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
+}
+.contenedor_logo{
+    height: 100%;
+    display: flex;
+    align-items: center; /* Centra el logo verticalmente */
+}
+.logo{
+    width: 80px;
+    height: auto;
+}
+.navbar{
+    display: flex;
+    flex-grow: 1; /* Permite que la barra de navegación crezca */
+    justify-content: center; /* Centra los enlaces */
+    gap: 2em;
+    font-size: 1em;
+    font-weight: 500;
+}
+.navbar a{
+    text-decoration: none;
+    color: white;
+    font-family: "DM Sans", sans-serif;
+    transition: 0.3s
+
+}
+.navbar a:hover{
+    color: rgb(47, 2, 47);
+    transform: translateY(-3px);
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px); /* Resta la altura del header */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    /* Fondo con efecto de burbujas/partículas */
+    background-color: #090011; /* Color base de respaldo */
+    background-image: 
+        /* Capa de burbujas grandes */
+        radial-gradient(circle at 20% 30%, rgba(125, 42, 232, 0.3) 0%, transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(125, 42, 232, 0.25) 0%, transparent 40%),
+        /* Capa de burbujas pequeñas (estrellas) */
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 1px, transparent 2px),
+        /* Capa de gradiente original */
+        linear-gradient(to left, #190031 0%, #090011 100%);
+}
+
+.presentation {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    margin-top: -10rem;    
+}
+
+.split{
+    font-family: "Mori";
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+}
+.especialidad{
+    font-family: "DM Sans", sans-serif;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.parrafo {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.2rem;
+}
+
+.button {
+  position: relative;
+  padding: 20px 42px;
+  border-radius: 6px;
+  border: none;
+  margin-top: 3rem;
+  color: #fff;
+  cursor: pointer;
+  background-color: #7d2ae8;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+
+.button:active {
+  transform: scale(0.96);
+}
+
+.button:before,
+.button:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.button:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.button:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.iconabajo{
+    width: 50px;
+}
+
+.flecha-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 50%; /* Centra el enlace */
+    transform: translateX(-50%); /* Ajuste fino para el centrado */
+    top: 5rem;
+    cursor: pointer;
+}
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #090011;
+    color: white;
+    font-family: "DM Sans", sans-serif;
+}
+
+.about-section h2 {
+    font-size: 4rem;
+}

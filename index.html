@@ -4,8 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio will</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Añade la librería GSAP y el plugin SplitText -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- Tu script de animaciones -->
+    <script type="module" src="./js/gsapAnimations.js"></script>
 </head>
 <body>
-    
+    <header class="header">
+        <div class="contenedor_logo">
+            <img src="./assets/icons/logo_will.png" class="logo">
+        </div>
+        <nav class="navbar">
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="">projectos</a>
+            <a href="">contacto</a>
+        </nav>
+    </header>
+    <main>
+        <section class="presentation">
+            <h3 class="split">Hola soy Will</h3>
+            <h1 class="especialidad">Desarrollador Fullstack</h1>
+                <p class="parrafo">Creando experiencias digitales excepcionales 
+                    con código limpio y diseño centrado en el usuario</p>
+                    <button class="button">Descargar CV</button>
+                    <a href="#sobre-mi" class="flecha-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flecha" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg>
+                    </a>
+        </section>
+    </main>
+    <section id="sobre-mi" class="about-section">
+        <h2>Sobre Mí</h2>
+        <p>Aquí puedes hablar sobre tu experiencia, tu pasión por el desarrollo y lo que te motiva.</p>
+    </section>
 </body>
 </html>
