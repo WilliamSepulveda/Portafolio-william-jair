@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio will</title>
     <link rel="stylesheet" href="./css/style.css">
-    <!-- Añade la librería GSAP y el plugin SplitText -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <!-- Tu script de animaciones -->
-    <script type="module" src="./js/gsapAnimations.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <header class="header">
@@ -19,25 +16,363 @@
             <a href="#inicio">Inicio</a>
             <a href="#sobre-mi">Sobre mí</a>
             <a href="#habilidades">Habilidades</a>
-            <a href="">projectos</a>
-            <a href="">contacto</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
         </nav>
     </header>
-    <main>
-        <section class="presentation">
-            <h3 class="split">Hola soy Will</h3>
-            <h1 class="especialidad">Desarrollador Fullstack</h1>
-                <p class="parrafo">Creando experiencias digitales excepcionales 
+    <main id="inicio">
+        <div id="tsparticles"></div>
+        <section class="presentation" >
+            <h3 class="split animate-on-scroll">Hola soy Will</h3>
+            <h1 id="animated-headline" class="especialidad">Desarrollador Fullstack</h1>
+                <p class="parrafo animate-on-scroll">Creando experiencias digitales excepcionales 
                     con código limpio y diseño centrado en el usuario</p>
-                    <button class="button">Descargar CV</button>
-                    <a href="#sobre-mi" class="flecha-link">
+                    <a href="./assets/docs/Hoja_de_vida_william_sepulveda_Campuslands.pdf">
+                        <button onclick="" class="button animate-on-scroll">Descargar CV </button>
+                    </a>
+                    <a href="#sobre-mi" class="flecha-link animate-on-scroll">
                         <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flecha" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg>
                     </a>
         </section>
     </main>
     <section id="sobre-mi" class="about-section">
-        <h2>Sobre Mí</h2>
-        <p>Aquí puedes hablar sobre tu experiencia, tu pasión por el desarrollo y lo que te motiva.</p>
+        <h2 class="section-title animate-on-scroll">Sobre Mí</h2>
+        <div class="about-content">
+            <div class="about-image animate-on-scroll">
+                <!-- Aquí puedes poner una foto tuya -->
+                <img src="./assets/media/william.png" alt="Foto de William Jair Sepulveda" class="parallax-image">
+            </div>
+            <div class="about-text animate-on-scroll">
+                <h3 class="animate-on-scroll">Descubre más <span class="section-span">sobre mi</span> </h3>
+                <p class="animate-on-scroll">
+                    Soy un desarrollador fullstack especializado en backend con una sólida comprensión de aplicaciones web. Tengo un firme compromiso con la adquisición continua de habilidades, me apasiona abordar desafíos técnicos, colaborar con equipos multidisciplinarios y aportar soluciones innovadoras. Aspiro a crecer profesionalmente y contribuir significativamente al éxito de los proyectos.
+                </p>
+                <div class="stats-container animate-on-scroll">
+                    <div class="stat-card">
+                    <h2>3+</h2>
+                    <p>Proyectos Completados</p>
+                    </div>
+                    <div class="stat-card">
+                    <h2>6+</h2>
+                    <p>meses de Experiencia</p>
+                    </div>
+                    <div class="stat-card">
+                    <h2>+</h2>
+                    <p>Capacidad de Adaptación</p>
+                    </div>
+                    <div class="stat-card">
+                    <h2>7+</h2>
+                    <p>Tecnologías Dominadas</p>
+                    </div>
+                </div>
+
+                <h4 class="title-cert animate-on-scroll">Certificaciones Destacadas</h4>
+                <!-- Contenedor para las tarjetas de certificación -->
+                <div class="cert-card animate-on-scroll">
+                    <div class="cert-dot"></div>
+                    <div>
+                        <h4>AWS Certified Developer</h4>
+                        <p>Amazon Web Services • 2023</p>
+                    </div>
+                </div>
+               
+                <div class="cert-card animate-on-scroll">
+                    <div class="cert-dot"></div>
+                    <div>
+                        <h4>Introducción a GIT</h4>
+                        <p>microsoft</p>
+                    </div>
+                </div>
+                <div class="cert-card animate-on-scroll">
+                    <div class="cert-dot"></div>
+                    <div>
+                        <h4>AWS Certified Developer</h4>
+                        <p>Amazon Web Services • 2023</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+    <!-- seccion de habilidades -->
+
+    <section class="skills-section" id="habilidades">
+        
+        <h2 class="skills-title animate-on-scroll">Mis <span>Habilidades</span></h2>
+        <p class="skills-subtitle animate-on-scroll">Tecnologías y herramientas que 
+            domino para crear soluciones robustas y escalables</p>
+        <div class="skills-container ">
+    <div class="skill-card animate-on-scroll">
+      <div class="skill-header">
+        <div class="skill-icon frontend"></div>
+        <h3>Frontend</h3>
+      </div>
+      <div class="skill-bar">
+        <p>JavaScript <span>95%</span></p>
+        <div class="bar"><span data-width="95%"></span></div>
+      </div>
+      <div class="skill-bar">
+        <p>React <span>90%</span></p>
+        <div class="bar"><span data-width="90%"></span></div>
+      </div>
+      <div class="skill-bar">
+        <p>HTML/CSS <span>95%</span></p>
+        <div class="bar"><span data-width="95%"></span></div>
+      </div>
+      <div class="skill-bar">
+        <p>TypeScript <span>85%</span></p>
+        <div class="bar"><span data-width="85%"></span></div>
+      </div>
+    </div>
+
+    <div class="skill-card animate-on-scroll">
+      <div class="skill-header">
+        <div class="skill-icon backend"></div>
+        <h3>Backend</h3>
+      </div>
+      <div class="skill-bar">
+        <p>Node.js <span>88%</span></p>
+        <div class="bar"><span data-width="88%"></span></div>
+      </div>
+      <div class="skill-bar">
+        <p>Express.js <span>85%</span></p>
+        <div class="bar"><span data-width="85%"></span></div>
+      </div>
+      <div class="skill-bar">
+        <p>GraphQL <span>80%</span></p>
+        <div class="bar"><span data-width="80%"></span></div>
+      </div>
+    </div>
+
+    <div class="skill-card animate-on-scroll">
+      <div class="skill-header">
+        <div class="skill-icon database"></div>
+        <h3>Database</h3>
+      </div>
+      <div class="skill-bar">
+        <p>MongoDB <span>82%</span></p>
+        <div class="bar"><span data-width="82%"></span></div>
+      </div>
+      <div class="skill-bar">
+        <p>PostgreSQL <span>78%</span></p>
+        <div class="bar"><span data-width="78%"></span></div>
+      </div>
+    </div>
+
+     <div class="skill-card animate-on-scroll">
+      <div class="skill-header">
+        <div class="skill-icon database"></div>
+        <h3>Tools</h3>
+      </div>
+      <div class="skill-bar">
+        <p>Git <span>80%</span></p>
+        <div class="bar"><span data-width="80%"></span></div>
+      </div>
+      <div class="skill-bar">
+        <p>Docker <span>75%</span></p>
+        <div class="bar"><span data-width="75%"></span></div>
+      </div>
+    </div>
+
+    <div class="skill-card animate-on-scroll">
+      <div class="skill-header">
+        <div class="skill-icon backend"></div>
+        <h3>Tools</h3>
+      </div>
+      <div class="skill-bar">
+        <p>Git <span>80%</span></p>
+        <div class="bar"><span data-width="80%"></span></div>
+      </div>
+      <div class="skill-bar">
+        <p>Docker <span>75%</span></p>
+        <div class="bar"><span data-width="75%"></span></div>
+      </div>
+    </div>
+</div>
+
+    <div class="stacks">
+        <button>React</button>
+        <button>Node.js</button>
+        <button>MongoDB</button>
+        <button>Express.js</button>
+        <button>Javascript</button>
+        <button>Git</button>
+        <span>Mi stack preferido me permite crear aplicaciones
+        web completas, desde interfaces de usuario dinámicas 
+        hasta APIs robustas y bases de datos escalables.</span>
+    </div>
+    </section>
+
+
+    <section class="proyectos-section" id="proyectos">
+        <h2 class="section-title animate-on-scroll">Mis <span>Proyectos</span></h2>
+        <p class="skills-subtitle animate-on-scroll">Algunos de mis trabajos más recientes</p>
+
+        <div class="projects-container">
+            <!-- Proyecto 1 -->
+            <div class="project-card animate-on-scroll">
+                <div class="project-top">
+                    <div class="project-type">NotesApp</div>
+                    <div class="project-links">
+                    <a href="#" target="_blank" class="icon-btn" aria-label="Ver demo del proyecto">
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                    </a>
+                    <a href="#" target="_blank" class="icon-btn" aria-label="Ver código en GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">NotesApp</h3>
+                    <p class="project-desc">
+                    Aplicación de Notas con registro e inicio de sesión
+                    </p>
+                    <div class="project-tags">
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>MongoDBAtlas</span>
+                    <span>Vite</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="#" target="_blank" class="btn demo-btn"><i class="fa-solid fa-link"></i> Demo</a>
+                        <a href="#" target="_blank" class="btn code-btn"><i class="fa-brands fa-github"></i> Código</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 2 -->
+            <div class="project-card animate-on-scroll" style="transition-delay: 0.1s;">
+                <div class="project-top">
+                    <div class="project-type">E-commerce</div>
+                    <div class="project-links">
+                    <a href="#" target="_blank" class="icon-btn" aria-label="Ver demo del proyecto">
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                    </a>
+                    <a href="#" target="_blank" class="icon-btn" aria-label="Ver código en GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">E-commerce Amazon</h3>
+                    <p class="project-desc">
+                    Tienda online completa con carrito de compras, pasarela de pago y panel de administración de productos.
+                    </p>
+                    <div class="project-tags">
+                    <span>React</span>
+                    <span>Express</span>
+                    <span>JWT</span>
+                    <span>Amazon API</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="#" target="_blank" class="btn demo-btn"><i class="fa-solid fa-link"></i> Demo</a>
+                        <a href="#" target="_blank" class="btn code-btn"><i class="fa-brands fa-github"></i> Código</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proyecto 3 -->
+            <div class="project-card animate-on-scroll" style="transition-delay: 0.2s;">
+                <div class="project-top">
+                    <div class="project-type">CINEMA</div>
+                    <div class="project-links">
+                    <a href="#" target="_blank" class="icon-btn" aria-label="Ver documentación de la API">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </a>
+                    <a href="#" target="_blank" class="icon-btn" aria-label="Ver código en GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Cine Campus</h3>
+                    <p class="project-desc">
+                    App de cine y gestor de entradas.
+                    </p>
+                    <div class="project-tags">
+                    <span>Node.js</span>
+                    <span>MongoAtlas</span>
+                    <span>javascript</span>
+                    <span>JWT</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="#" target="_blank" class="btn demo-btn"><i class="fa-solid fa-link"></i> Demo</a>
+                        <a href="#" target="_blank" class="btn code-btn"><i class="fa-brands fa-github"></i> Código</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="all-projects_btn">ver todos los proyectos</button>
+    </section>
+
+
+    <section class="contact-section" id="contacto">
+        <h2 class="section-title animate-on-scroll">¿Tienes un proyecto en <span>mente</span>?</h2>
+        <p class="skills-subtitle animate-on-scroll">
+            Estoy siempre abierto a discutir nuevas oportunidades y proyectos interesantes. ¡Hablemos!
+        </p>
+
+        <div class="contact-container animate-on-scroll">
+            <div class="contact-info">
+                <h3>Información de Contacto</h3>
+                <p>Rellena el formulario y me pondré en contacto contigo lo antes posible. También puedes encontrarme en estas plataformas:</p>
+                <div class="social-links-contact">
+                    <a href="https://www.linkedin.com/in/william-jair-sep%C3%BAlveda-158230319/" target="_blank" class="icon-btn" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/WilliamSepulveda" target="_blank" class="icon-btn" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://wa.me/573134024782" target="_blank" class="icon-btn" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <form action="#" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required placeholder="Tu Nombre">
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required placeholder="Tu Correo Electrónico">
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="5" required placeholder="Tu Mensaje"></textarea>
+                </div>
+                <button type="submit" class="btn demo-btn">Enviar Mensaje <i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3 class="footer-title">William Jair Sepulveda</h3>
+                <p>Desarrollador Fullstack comprometido con la creación de soluciones web innovadoras y de alta calidad.</p>
+            </div>
+            <div class="footer-links">
+                <h3 class="footer-title">Enlaces Rápidos</h3>
+                <a href="#inicio">Inicio</a>
+                <a href="#sobre-mi">Sobre Mí</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <div class="footer-social">
+                <h3 class="footer-title">Sígueme</h3>
+                <div class="social-links-contact">
+                    <a href="https://www.linkedin.com/in/william-jair-sep%C3%BAlveda-158230319/" target="_blank" class="icon-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/WilliamSepulveda" target="_blank" class="icon-btn" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://wa.me/573134024782" target="_blank" class="icon-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 William Jair Sepulveda. Todos los derechos reservados.</p>
+        </div>
+        <a href="#inicio" class="back-to-top" aria-label="Volver arriba"><i class="fa-solid fa-arrow-up"></i></a>
+    </footer>
+    <!-- Scripts al final del body para un rendimiento óptimo -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+    <script type="module" src="./js/particles-config.js"></script>
+    <script type="module" src="./js/gsapAnimations.js"></script>
 </body>
 </html>

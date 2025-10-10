@@ -1,66 +1,38 @@
-// Espera a que la página esté completamente cargada
-window.addEventListener("load", () => {
-  // Crea una línea de tiempo para controlar la secuencia de animaciones
-  const tl = gsap.timeline();
+// --- Lógica para animación de texto letra por letra ---
+document.addEventListener('DOMContentLoaded', () => {
+  const headline = document.getElementById('animated-headline');
+  if (headline) {
+    const text = headline.textContent;
+    const chars = text.split('');
+    headline.innerHTML = ''; // Limpiamos el contenido original
 
-  // --- Animación del Saludo ("Hola soy Will") ---
-  const saludo = document.querySelector(".split");
-  // Divide el texto en caracteres y los envuelve en spans
-  saludo.innerHTML = saludo.textContent.split("").map(char => `<span class="char">${char === " " ? "&nbsp;" : char}</span>`).join("");
-  
-  tl.from(saludo.querySelectorAll(".char"), {
-    duration: 0.8,
-    opacity: 0,
-    y: 80,
-    rotationX: -90,
-    stagger: 0.05,
-    ease: "power4.out",
-  });
+    chars.forEach((char, index) => {
+      const span = document.createElement('span');
+      // Si es un espacio, usamos un espacio duro para que no se colapse
+      span.textContent = char === ' ' ? '\u00A0' : char;
+      span.style.transitionDelay = `${index * 0.05}s`;
+      headline.appendChild(span);
+    });
 
-  // --- Animación de la Especialidad ("Desarrollador Fullstack") ---
-  const especialidad = document.querySelector(".especialidad");
-  // Divide el texto en palabras, y cada palabra en caracteres
-  especialidad.innerHTML = especialidad.textContent.split(" ").map(word => {
-    const letters = word.split("").map(char => `<span class="char">${char}</span>`).join("");
-    return `<span class="word">${letters}</span>`;
-  }).join("&nbsp;");
-
-  tl.from(especialidad.querySelectorAll(".char"), {
-    duration: 0.6,
-    opacity: 0,
-    y: 50,
-    stagger: 0.03,
-    ease: "power3.out",
-  }, "-=0.9");
-
-  // --- Animación del Párrafo y Botón ---
-  tl.from([".parrafo",], {
-    duration: 1,
-    opacity: 0,
-    y: 30,
-    stagger: 0.2,
-    ease: "power4.out",
-  }, "-=0.5");
-
-  tl.from([".button",], {
-    duration: 0.1,
-    y: 30,
-    stagger: 0.2,
-    opacity: 1,
-    ease: "power4.out",
-  }, "-=0.5");
-
-  // --- Animación de la flecha ---
-  gsap.to(".flecha", {
-    y: 10, // Mueve la flecha 10px hacia abajo
-    duration: 0.8,
-    repeat: -1, // Repite la animación infinitamente
-    yoyo: true, // Hace que la animación vaya de ida y vuelta (efecto rebote)
-    ease: "power1.inOut",
-  });
+    // Añadimos la clase 'visible' para iniciar la animación
+    setTimeout(() => headline.classList.add('visible'), 100);
+  }
 });
 
+// --- Lógica para animaciones de entrada con Intersection Observer (sin GSAP) ---
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, {
+  threshold: 0.1 // El elemento se considera visible cuando el 10% está en pantalla
+});
 
+// Selecciona todos los elementos que quieres animar y los observa
+const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+elementsToAnimate.forEach((el) => observer.observe(el));
 
 // --- Lógica para cambiar el fondo del header al hacer scroll ---
 const header = document.querySelector(".header");
