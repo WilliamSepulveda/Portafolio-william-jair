@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todos los Proyectos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/project.css">
+</head>
+<body>
+  <header class="header">
+    <a href="/index.html" class="back-link">← Volver al inicio</a>
+    <h1>Todos los Proyectos</h1>
+  </header>
+
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">Todos</button>
+    <button class="filter-btn" data-filter="App">App</button>
+    <button class="filter-btn" data-filter="E-commerce">E-commerce</button>
+    <button class="filter-btn" data-filter="Cinema">Cinema</button>
+  </div>
+
+  <section class="projects-container">
+    <!-- Proyecto 1: NotesApp -->
+    <div class="project-card" data-category="App">
+      <div class="project-top">
+        <div class="project-type">NotesApp</div>
+        <div class="project-links">
+          <a href="https://williamsepulveda.github.io/Appnotes/" target="_blank" class="icon-btn" aria-label="Ver demo del proyecto"><i class="fa-solid fa-up-right-from-square"></i></a>
+          <a href="https://github.com/WilliamSepulveda/Appnotes" target="_blank" class="icon-btn" aria-label="Ver código en GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">NotesApp</h3>
+        <p class="project-desc">Aplicación de Notas con registro e inicio de sesión</p>
+        <div class="project-tags">
+          <span>React</span><span>Node.js</span><span>MongoDBAtlas</span><span>Vite</span>
+        </div>
+        <div class="project-buttons">
+          <a href="https://williamsepulveda.github.io/Appnotes/" target="_blank" class="btn demo-btn"><i class="fa-solid fa-link"></i> Demo</a>
+          <a href="https://github.com/WilliamSepulveda/Appnotes" target="_blank" class="btn code-btn"><i class="fa-brands fa-github"></i> Código</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Proyecto 2: E-commerce -->
+    <div class="project-card" data-category="E-commerce">
+      <div class="project-top">
+        <div class="project-type">E-commerce</div>
+        <div class="project-links">
+          <a href="https://williamsepulveda.github.io/ecommerCampusM1/?id=aps" target="_blank" class="icon-btn" aria-label="Ver demo del proyecto"><i class="fa-solid fa-up-right-from-square"></i></a>
+          <a href="https://github.com/WilliamSepulveda/ecommerCampusM1" target="_blank" class="icon-btn" aria-label="Ver código en GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">E-commerce Amazon</h3>
+        <p class="project-desc">Tienda online completa con carrito de compras, pasarela de pago y panel de administración de productos.</p>
+        <div class="project-tags">
+          <span>React</span><span>Express</span><span>JWT</span><span>Amazon API</span>
+        </div>
+        <div class="project-buttons">
+          <a href="https://williamsepulveda.github.io/ecommerCampusM1/?id=aps" target="_blank" class="btn demo-btn"><i class="fa-solid fa-link"></i> Demo</a>
+          <a href="https://github.com/WilliamSepulveda/ecommerCampusM1" target="_blank" class="btn code-btn"><i class="fa-brands fa-github"></i> Código</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Proyecto 3: Cinema -->
+    <div class="project-card" data-category="Cinema">
+      <div class="project-top">
+        <div class="project-type">CINEMA</div>
+        <div class="project-links">
+          <a href="https://github.com/WilliamSepulveda/cineCampus" target="_blank" class="icon-btn" aria-label="Ver documentación de la API"><i class="fa-solid fa-file-lines"></i></a>
+          <a href="https://github.com/WilliamSepulveda/cineCampus" target="_blank" class="icon-btn" aria-label="Ver código en GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Cine Campus</h3>
+        <p class="project-desc">App de cine y gestor de entradas.</p>
+        <div class="project-tags">
+          <span>Node.js</span><span>MongoAtlas</span><span>javascript</span><span>JWT</span>
+        </div>
+        <div class="project-buttons">
+          <a href="https://github.com/WilliamSepulveda/cineCampus" target="_blank" class="btn demo-btn"><i class="fa-solid fa-link"></i> Demo</a>
+          <a href="https://github.com/WilliamSepulveda/cineCampus" target="_blank" class="btn code-btn"><i class="fa-brands fa-github"></i> Código</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
