@@ -8,18 +8,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header class="header">
-        <div class="contenedor_logo">
-            <img src="./assets/icons/logo_will.png" class="logo">
-        </div>
-        <nav class="navbar">
-            <a href="#inicio">Inicio</a>
-            <a href="#sobre-mi">Sobre mí</a>
-            <a href="#habilidades">Habilidades</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
-    </header>
+    
+   <header class="header">
+  <div class="contenedor_logo">
+    <img src="./assets/icons/logo_will.png" class="logo" alt="Logo Will">
+  </div>
+
+  <input type="checkbox" id="menu-toggle">
+
+  <label for="menu-toggle" class="menu-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <nav class="navbar" onclick="document.getElementById('menu-toggle').checked = false">
+    <a href="#inicio">Inicio</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+
+
+    
     <main id="inicio">
         <div id="tsparticles"></div>
         <section class="presentation" >
@@ -35,6 +49,8 @@
                     </a>
         </section>
     </main>
+
+    
     <section id="sobre-mi" class="about-section">
         <h2 class="section-title animate-on-scroll">Sobre Mí</h2>
         <div class="about-content">
@@ -374,6 +390,7 @@
     </footer>
     <!-- Scripts al final del body para un rendimiento óptimo -->
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+    <script type="module" src="./js/main.js"></script>
     <script type="module" src="./js/particles-config.js"></script>
     <script type="module" src="./js/gsapAnimations.js"></script>
 </body>
